@@ -1,6 +1,6 @@
 import '../styles/index.scss';
 
-console.log('webpack starterkit');
+console.log('Start...');
 
 const maxZeroGap = n => {
     var number = n;
@@ -21,9 +21,10 @@ const maxZeroGap = n => {
         
         binary = '' + digit + binary;
         number = parseInt(number / 2);
+        console.log('number, binary:', number, binary);
     }
     
-    //console.log('number, binary:', number, binary);
+    
     
     return max;
 };
