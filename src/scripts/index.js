@@ -2,31 +2,13 @@ import '../styles/index.scss';
 
 console.log('Start...');
 
-const maxZeroGap = n => {
-    var number = n;
-    var binary = '';
-    var counter = -1;
-    var max = 0;
-    while(number > 0) {
-        var digit = number % 2;
-        
-        if(digit === 1) {
-            if(counter > max) {
-                max = counter;
-            }
-            counter = 0;
-        } else if(counter >= 0) {
-            counter++;
-        }
-        
-        binary = '' + digit + binary;
-        number = parseInt(number / 2);
-        console.log('number, binary:', number, binary);
-    }
-    
-    
-    
-    return max;
-};
+// you can write to stdout for debugging purposes, e.g.
+// console.log('this is a debug message');
+let N = 1;
 
-console.log(maxZeroGap(9));
+function solution(N) {
+    // write your code in JavaScript (Node.js 8.9.4)
+    return N;
+}
+
+console.log(solution(N));
