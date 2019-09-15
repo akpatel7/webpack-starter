@@ -5,11 +5,11 @@ console.log('Start...');
 // you can write to stdout for debugging purposes, e.g.
 // console.log('this is a debug message');
 
-const N = 1;
+const A = [];
 
-function solution(N) {
+function solution(A) {
     // write your code in JavaScript (Node.js 8.9.4)
-    return N;
+    return A;
 }
 
-console.log(solution(N));
+console.log(solution(A));
