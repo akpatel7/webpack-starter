@@ -104,4 +104,49 @@ Write an efficient algorithm for the following assumptions:
 N is an integer within the range [0..200,000];
 string S consists only of the following characters: "(", "{", "[", "]", "}" and/or ")".
 Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
+
+function solution(S) {
+    // write your code in JavaScript (Node.js 4.0.0)
+    
+    var i = 0;
+    var stack = [];
+    
+    if(S.length % 2 === 1) {
+        return 0;
+    }
+    
+    for(i=0; i<S.length; i++) {
+        var char = S.charAt(i);
+        if(isOpener(char)) {
+            stack.push(char);
+        } else {
+            if(stack.length === 0) {
+                return 0;
+            } else {
+                var lastChar = stack.pop();
+                if(!checkCloser(lastChar, char)) {
+                    return 0;
+                }
+            }
+        }
+    }
+    
+    if(stack.length === 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+function isOpener(char) {
+    return char === '{' || char === '[' || char === '(' ? true : false;
+}
+
+function checkCloser(opener, closer) {
+    if(opener === '(' && closer === ')') return true;
+    if(opener === '[' && closer === ']') return true;
+    if(opener === '{' && closer === '}') return true;
+    
+    return false;
+}
 */
